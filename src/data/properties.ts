@@ -1,0 +1,312 @@
+import heroCarriageHouse from '../assets/properties/hero-carriage-house.jpg'
+import heroTinyHouse from '../assets/properties/hero-tiny-house.jpg'
+import heroPbghSunrise from '../assets/properties/hero-pbgh-sunrise.jpg'
+import heroPbghEastView from '../assets/properties/hero-pbgh-east-view.jpg'
+import heroPbghBakery from '../assets/properties/hero-pbgh-bakery.jpg'
+import heroPbghGarden from '../assets/properties/hero-pbgh-garden.jpg'
+
+import galleryLivingRoom from '../assets/properties/gallery-living-room.jpg'
+import galleryBackyard from '../assets/properties/gallery-backyard.jpg'
+import galleryKitchen1 from '../assets/properties/gallery-kitchen-1.jpg'
+import galleryKitchen2 from '../assets/properties/gallery-kitchen-2.jpg'
+import galleryBathroom from '../assets/properties/gallery-bathroom.jpg'
+
+import tinyHouseGalleryExterior from '../assets/properties/tiny-house-gallery-exterior.jpg'
+import tinyHouseGalleryBedroom from '../assets/properties/tiny-house-gallery-bedroom.jpg'
+import tinyHouseGallerySwing from '../assets/properties/tiny-house-gallery-swing.jpg'
+import tinyHouseGalleryPorch from '../assets/properties/tiny-house-gallery-porch.jpg'
+import tinyHouseGalleryExterior2 from '../assets/properties/tiny-house-gallery-exterior2.jpg'
+
+import pbghSunriseGalleryBedroom from '../assets/properties/pbgh-sunrise-gallery-bedroom.jpg'
+import pbghSunriseGalleryExterior from '../assets/properties/pbgh-sunrise-gallery-exterior.jpg'
+import pbghSunriseGalleryWindow from '../assets/properties/pbgh-sunrise-gallery-window.jpg'
+import pbghSunriseGalleryDoor from '../assets/properties/pbgh-sunrise-gallery-door.jpg'
+import pbghSunriseGalleryBathroom from '../assets/properties/pbgh-sunrise-gallery-bathroom.jpg'
+
+import pbghBakeryGalleryBalcony from '../assets/properties/pbgh-bakery-gallery-balcony.jpg'
+import pbghBakeryGalleryShelf from '../assets/properties/pbgh-bakery-gallery-shelf.jpg'
+import pbghBakeryGallerySink from '../assets/properties/pbgh-bakery-gallery-sink.jpg'
+import pbghBakeryGallerySkylight from '../assets/properties/pbgh-bakery-gallery-skylight.jpg'
+import pbghBakeryGalleryShower from '../assets/properties/pbgh-bakery-gallery-shower.jpg'
+
+import pbghGardenGalleryLivingroom from '../assets/properties/pbgh-garden-gallery-livingroom.jpg'
+import pbghGardenGalleryBedroom from '../assets/properties/pbgh-garden-gallery-bedroom.jpg'
+import pbghGardenGalleryBathroom from '../assets/properties/pbgh-garden-gallery-bathroom.jpg'
+import pbghGardenGalleryDeck from '../assets/properties/pbgh-garden-gallery-deck.jpg'
+import pbghGardenGalleryHallway from '../assets/properties/pbgh-garden-gallery-hallway.jpg'
+
+import cardCarriageHouse from '../assets/carriage-house-card.jpg'
+import cardTinyHouse from '../assets/tiny-house-card.jpg'
+import cardGuesthouse from '../assets/guesthouse-card.jpg'
+
+export interface ListingHighlight {
+  title: string
+  description: string
+}
+
+export interface Property {
+  slug: string
+  name: string
+  neighborhood: string
+  cardDescription: string
+  cardImage: string
+  heroImage: string
+  gridImage?: string
+  heroSubtitle: string
+  rating: number
+  reviewCount: number
+  guestFavorite: boolean
+  overviewTitle: string
+  overviewParagraphs: string[]
+  highlights: ListingHighlight[]
+  amenities: string[]
+  checkIn: string
+  checkOut: string
+  maxGuests: string
+  safety: string[]
+  bedroomTitle: string
+  bedroomBeds: string
+  bedroomNote: string
+  hostName: string
+  hostReviews: number
+  hostYears: number
+  hostBlurb: string
+  locationTitle: string
+  locationBlurb: string
+  galleryImages: string[]
+}
+
+export const properties: Property[] = [
+  {
+    slug: 'carriage-house-apartment',
+    name: 'Carriage House Apartment',
+    neighborhood: 'Squirrel Hill, Pittsburgh',
+    cardDescription: 'A charming converted carriage house with private garden access',
+    cardImage: cardCarriageHouse,
+    heroImage: heroCarriageHouse,
+    gridImage: cardCarriageHouse,
+    heroSubtitle: 'Tiny home · 2 guests · 1 bedroom · 2 beds · 1 bath',
+    rating: 4.88,
+    reviewCount: 120,
+    guestFavorite: true,
+    overviewTitle: 'A comfortable Squirrel Hill stay',
+    overviewParagraphs: [
+      'Great location and a comfy carriage house apartment. The kitchen is well equipped, but it does not include a full range or oven.',
+      'This private efficiency includes a full shower and bath, a large living area with a high-quality futon/sofa, and a small toddler/child foldout sleeper.',
+    ],
+    highlights: [
+      { title: 'Top 5% of homes', description: 'Highly ranked on Airbnb based on ratings, reviews, and reliability.' },
+      { title: 'Near Frick Park', description: 'About a 10-minute walk to Frick Park, with Squirrel Hill shops and restaurants a few blocks away.' },
+      { title: 'Private backyard', description: 'Outdoor seating and a BBQ area for relaxing after a day of exploring.' },
+      { title: 'Guest access', description: 'Guests have full use of the private apartment and the rear yard.' },
+      { title: 'Other things to note', description: 'Access is not wheelchair friendly; stairs lead to the apartment.' },
+      { title: 'The space', description: 'A comfy efficiency with a full shower and bath, a large living area, a high-quality futon/sofa, and a small toddler/child foldout sleeper.' },
+    ],
+    amenities: ['Kitchen', 'Wi-Fi', 'Dedicated workspace', 'Free parking garage', 'Pets allowed', 'Private backyard'],
+    checkIn: '3:00 PM–10:00 PM',
+    checkOut: 'Before 11:00 AM',
+    maxGuests: '2 guests maximum',
+    safety: ['Exterior security cameras', 'Smoke and CO alarms'],
+    bedroomTitle: 'Bedroom',
+    bedroomBeds: '1 sofa bed · 1 toddler bed',
+    bedroomNote: 'The main sleeping position is a folding futon.',
+    hostName: 'Nicholas Dean',
+    hostReviews: 364,
+    hostYears: 12,
+    hostBlurb: 'A responsive local host who helps guests with travel logistics, local advice, and directions.',
+    locationTitle: 'Squirrel Hill, Pittsburgh',
+    locationBlurb: "The property is in Squirrel Hill, close to Frick Park, neighborhood shops, restaurants, and Pittsburgh's East End destinations.",
+    galleryImages: [galleryLivingRoom, galleryBackyard, galleryKitchen1, galleryKitchen2, galleryBathroom],
+  },
+  {
+    slug: 'tiny-house',
+    name: 'Tiny House',
+    neighborhood: 'Point Breeze, Pittsburgh',
+    cardDescription: 'A beautifully designed compact escape in the East End',
+    cardImage: cardTinyHouse,
+    heroImage: heroTinyHouse,
+    heroSubtitle: 'Short-term stay · Point Breeze · Pittsburgh',
+    rating: 4.88,
+    reviewCount: 120,
+    guestFavorite: true,
+    overviewTitle: 'About This Property',
+    overviewParagraphs: ['A beautifully designed compact escape in the East End.'],
+    highlights: [
+      { title: 'Property stay', description: "Comfortable short-term accommodation in Pittsburgh's East End." },
+      { title: 'Local access', description: 'Conveniently located near Point Breeze and Squirrel Hill destinations.' },
+      { title: 'Private space', description: 'Enjoy a dedicated property space designed for a comfortable stay.' },
+      { title: 'Guest amenities', description: 'Practical amenities are presented on this property page.' },
+      { title: 'Easy booking', description: 'Use the booking options below to check availability.' },
+      { title: 'Guest experience', description: 'A straightforward stay with support from the Point Breeze Guest House host.' },
+    ],
+    amenities: ['Kitchen', 'Wi-Fi', 'Dedicated workspace', 'Free parking garage', 'Pets allowed', 'Private backyard'],
+    checkIn: '3:00 PM–10:00 PM',
+    checkOut: 'Before 11:00 AM',
+    maxGuests: '2 guests maximum',
+    safety: ['Exterior security cameras', 'Smoke and CO alarms'],
+    bedroomTitle: 'Bedroom',
+    bedroomBeds: 'Sleeping arrangements for this property',
+    bedroomNote: 'See the property-specific listing details for the exact sleeping setup.',
+    hostName: 'Nicholas Dean',
+    hostReviews: 364,
+    hostYears: 12,
+    hostBlurb: "Point Breeze Guest House provides comfortable short-term stays in Pittsburgh's East End.",
+    locationTitle: 'Point Breeze, Pittsburgh',
+    locationBlurb: "Located in Pittsburgh's East End, with convenient access to nearby neighborhoods, universities, hospitals, and local destinations.",
+    galleryImages: [tinyHouseGalleryExterior, tinyHouseGalleryBedroom, tinyHouseGallerySwing, tinyHouseGalleryPorch, tinyHouseGalleryExterior2],
+  },
+  {
+    slug: 'pbgh-sunrise',
+    name: 'PBGH Sunrise',
+    neighborhood: 'Point Breeze, Pittsburgh',
+    cardDescription: 'Wake up to warm eastern light in this serene upper-floor unit',
+    cardImage: cardGuesthouse,
+    heroImage: heroPbghSunrise,
+    heroSubtitle: 'Short-term stay · Point Breeze · Pittsburgh',
+    rating: 4.88,
+    reviewCount: 120,
+    guestFavorite: true,
+    overviewTitle: 'About This Property',
+    overviewParagraphs: ['A nicely restored Victorian room with great morning light, private bath, and a dedicated workspace / kitchenette.'],
+    highlights: [
+      { title: 'Property stay', description: "Comfortable short-term accommodation in Pittsburgh's East End." },
+      { title: 'Local access', description: 'Conveniently located near Point Breeze and Squirrel Hill destinations.' },
+      { title: 'Private space', description: 'Enjoy a dedicated property space designed for a comfortable stay.' },
+      { title: 'Guest amenities', description: 'Practical amenities are presented on this property page.' },
+      { title: 'Easy booking', description: 'Use the booking options below to check availability.' },
+      { title: 'Guest experience', description: 'A straightforward stay with support from the Point Breeze Guest House host.' },
+    ],
+    amenities: ['Kitchen', 'Wi-Fi', 'Dedicated workspace', 'Free parking garage', 'Pets allowed', 'Private backyard'],
+    checkIn: '3:00 PM–10:00 PM',
+    checkOut: 'Before 11:00 AM',
+    maxGuests: '2 guests maximum',
+    safety: ['Exterior security cameras', 'Smoke and CO alarms'],
+    bedroomTitle: 'Bedroom',
+    bedroomBeds: 'Sleeping arrangements for this property',
+    bedroomNote: 'See the property-specific listing details for the exact sleeping setup.',
+    hostName: 'Nicholas Dean',
+    hostReviews: 364,
+    hostYears: 12,
+    hostBlurb: "Point Breeze Guest House provides comfortable short-term stays in Pittsburgh's East End.",
+    locationTitle: 'Point Breeze, Pittsburgh',
+    locationBlurb: "Located in Pittsburgh's East End, with convenient access to nearby neighborhoods, universities, hospitals, and local destinations.",
+    galleryImages: [pbghSunriseGalleryBedroom, pbghSunriseGalleryExterior, pbghSunriseGalleryWindow, pbghSunriseGalleryDoor, pbghSunriseGalleryBathroom],
+  },
+  {
+    slug: 'pbgh-east-view',
+    name: 'PBGH East View',
+    neighborhood: 'Point Breeze, Pittsburgh',
+    cardDescription: 'A comfortable East End room with an adjacent fully equipped kitchenette',
+    cardImage: cardGuesthouse,
+    heroImage: heroPbghEastView,
+    heroSubtitle: 'Short-term stay · Point Breeze · Pittsburgh',
+    rating: 4.88,
+    reviewCount: 120,
+    guestFavorite: true,
+    overviewTitle: 'About This Property',
+    overviewParagraphs: ['A comfortable East End room with an adjacent fully equipped kitchenette and private bath.'],
+    highlights: [
+      { title: 'Property stay', description: "Comfortable short-term accommodation in Pittsburgh's East End." },
+      { title: 'Local access', description: 'Conveniently located near Point Breeze and Squirrel Hill destinations.' },
+      { title: 'Private space', description: 'Enjoy a dedicated property space designed for a comfortable stay.' },
+      { title: 'Guest amenities', description: 'Practical amenities are presented on this property page.' },
+      { title: 'Easy booking', description: 'Use the booking options below to check availability.' },
+      { title: 'Guest experience', description: 'A straightforward stay with support from the Point Breeze Guest House host.' },
+    ],
+    amenities: ['Kitchen', 'Wi-Fi', 'Dedicated workspace', 'Free parking garage', 'Pets allowed', 'Private backyard'],
+    checkIn: '3:00 PM–10:00 PM',
+    checkOut: 'Before 11:00 AM',
+    maxGuests: '2 guests maximum',
+    safety: ['Exterior security cameras', 'Smoke and CO alarms'],
+    bedroomTitle: 'Bedroom',
+    bedroomBeds: 'Sleeping arrangements for this property',
+    bedroomNote: 'See the property-specific listing details for the exact sleeping setup.',
+    hostName: 'Nicholas Dean',
+    hostReviews: 364,
+    hostYears: 12,
+    hostBlurb: "Point Breeze Guest House provides comfortable short-term stays in Pittsburgh's East End.",
+    locationTitle: 'Point Breeze, Pittsburgh',
+    locationBlurb: "Located in Pittsburgh's East End, with convenient access to nearby neighborhoods, universities, hospitals, and local destinations.",
+    galleryImages: [galleryLivingRoom, galleryBackyard, galleryKitchen1, galleryKitchen2, galleryBathroom],
+  },
+  {
+    slug: 'pbgh-bakery',
+    name: 'PBGH Bakery',
+    neighborhood: 'Point Breeze, Pittsburgh',
+    cardDescription: 'A spacious suite with a private balcony overlooking Bakery Square',
+    cardImage: cardGuesthouse,
+    heroImage: heroPbghBakery,
+    heroSubtitle: 'Short-term stay · Point Breeze · Pittsburgh',
+    rating: 4.88,
+    reviewCount: 120,
+    guestFavorite: true,
+    overviewTitle: 'About This Property',
+    overviewParagraphs: ['A spacious suite with a private balcony / terrace overlooking the green space and Bakery Square.'],
+    highlights: [
+      { title: 'Property stay', description: "Comfortable short-term accommodation in Pittsburgh's East End." },
+      { title: 'Local access', description: 'Conveniently located near Point Breeze and Squirrel Hill destinations.' },
+      { title: 'Private space', description: 'Enjoy a dedicated property space designed for a comfortable stay.' },
+      { title: 'Guest amenities', description: 'Practical amenities are presented on this property page.' },
+      { title: 'Easy booking', description: 'Use the booking options below to check availability.' },
+      { title: 'Guest experience', description: 'A straightforward stay with support from the Point Breeze Guest House host.' },
+    ],
+    amenities: ['Kitchen', 'Wi-Fi', 'Dedicated workspace', 'Free parking garage', 'Pets allowed', 'Private backyard'],
+    checkIn: '3:00 PM–10:00 PM',
+    checkOut: 'Before 11:00 AM',
+    maxGuests: '2 guests maximum',
+    safety: ['Exterior security cameras', 'Smoke and CO alarms'],
+    bedroomTitle: 'Bedroom',
+    bedroomBeds: 'Sleeping arrangements for this property',
+    bedroomNote: 'See the property-specific listing details for the exact sleeping setup.',
+    hostName: 'Nicholas Dean',
+    hostReviews: 364,
+    hostYears: 12,
+    hostBlurb: "Point Breeze Guest House provides comfortable short-term stays in Pittsburgh's East End.",
+    locationTitle: 'Point Breeze, Pittsburgh',
+    locationBlurb: "Located in Pittsburgh's East End, with convenient access to nearby neighborhoods, universities, hospitals, and local destinations.",
+    galleryImages: [pbghBakeryGalleryBalcony, pbghBakeryGalleryShelf, pbghBakeryGallerySink, pbghBakeryGallerySkylight, pbghBakeryGalleryShower],
+  },
+  {
+    slug: 'pbgh-garden',
+    name: 'PBGH Garden',
+    neighborhood: 'Point Breeze, Pittsburgh',
+    cardDescription: 'A garden-facing suite with two balconies and a private bath',
+    cardImage: cardGuesthouse,
+    heroImage: heroPbghGarden,
+    heroSubtitle: 'Short-term stay · Point Breeze · Pittsburgh',
+    rating: 4.88,
+    reviewCount: 120,
+    guestFavorite: true,
+    overviewTitle: 'About This Property',
+    overviewParagraphs: ['A garden-facing suite with two balconies, a kitchenette, and a private bath.'],
+    highlights: [
+      { title: 'Property stay', description: "Comfortable short-term accommodation in Pittsburgh's East End." },
+      { title: 'Local access', description: 'Conveniently located near Point Breeze and Squirrel Hill destinations.' },
+      { title: 'Private space', description: 'Enjoy a dedicated property space designed for a comfortable stay.' },
+      { title: 'Guest amenities', description: 'Practical amenities are presented on this property page.' },
+      { title: 'Easy booking', description: 'Use the booking options below to check availability.' },
+      { title: 'Guest experience', description: 'A straightforward stay with support from the Point Breeze Guest House host.' },
+    ],
+    amenities: ['Kitchen', 'Wi-Fi', 'Dedicated workspace', 'Free parking garage', 'Pets allowed', 'Private backyard'],
+    checkIn: '3:00 PM–10:00 PM',
+    checkOut: 'Before 11:00 AM',
+    maxGuests: '2 guests maximum',
+    safety: ['Exterior security cameras', 'Smoke and CO alarms'],
+    bedroomTitle: 'Bedroom',
+    bedroomBeds: 'Sleeping arrangements for this property',
+    bedroomNote: 'See the property-specific listing details for the exact sleeping setup.',
+    hostName: 'Nicholas Dean',
+    hostReviews: 364,
+    hostYears: 12,
+    hostBlurb: "Point Breeze Guest House provides comfortable short-term stays in Pittsburgh's East End.",
+    locationTitle: 'Point Breeze, Pittsburgh',
+    locationBlurb: "Located in Pittsburgh's East End, with convenient access to nearby neighborhoods, universities, hospitals, and local destinations.",
+    galleryImages: [pbghGardenGalleryLivingroom, pbghGardenGalleryBedroom, pbghGardenGalleryBathroom, pbghGardenGalleryDeck, pbghGardenGalleryHallway],
+  },
+]
+
+export function getPropertyBySlug(slug: string | undefined): Property | undefined {
+  return properties.find((property) => property.slug === slug)
+}
+
+export const featuredProperties = properties.slice(0, 3)
