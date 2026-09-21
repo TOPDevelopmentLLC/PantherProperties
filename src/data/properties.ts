@@ -52,6 +52,7 @@ export interface Property {
   cardImage: string
   heroImage: string
   gridImage?: string
+  airbnbUrl: string
   heroSubtitle: string
   rating: number
   reviewCount: number
@@ -85,6 +86,7 @@ export const properties: Property[] = [
     cardImage: cardCarriageHouse,
     heroImage: heroCarriageHouse,
     gridImage: cardCarriageHouse,
+    airbnbUrl: 'https://www.airbnb.com/rooms/45548553',
     heroSubtitle: 'Tiny home · 2 guests · 1 bedroom · 2 beds · 1 bath',
     rating: 4.88,
     reviewCount: 120,
@@ -125,6 +127,7 @@ export const properties: Property[] = [
     cardDescription: 'A beautifully designed compact escape in the East End',
     cardImage: cardTinyHouse,
     heroImage: heroTinyHouse,
+    airbnbUrl: 'https://www.airbnb.com/rooms/957761741551479770',
     heroSubtitle: 'Short-term stay · Point Breeze · Pittsburgh',
     rating: 4.88,
     reviewCount: 120,
@@ -162,6 +165,7 @@ export const properties: Property[] = [
     cardDescription: 'Wake up to warm eastern light in this serene upper-floor unit',
     cardImage: cardGuesthouse,
     heroImage: heroPbghSunrise,
+    airbnbUrl: 'https://www.airbnb.com/rooms/47486756',
     heroSubtitle: 'Short-term stay · Point Breeze · Pittsburgh',
     rating: 4.88,
     reviewCount: 120,
@@ -199,6 +203,7 @@ export const properties: Property[] = [
     cardDescription: 'A comfortable East End room with an adjacent fully equipped kitchenette',
     cardImage: cardGuesthouse,
     heroImage: heroPbghEastView,
+    airbnbUrl: 'https://www.airbnb.com/rooms/42703538',
     heroSubtitle: 'Short-term stay · Point Breeze · Pittsburgh',
     rating: 4.88,
     reviewCount: 120,
@@ -236,6 +241,7 @@ export const properties: Property[] = [
     cardDescription: 'A spacious suite with a private balcony overlooking Bakery Square',
     cardImage: cardGuesthouse,
     heroImage: heroPbghBakery,
+    airbnbUrl: 'https://www.airbnb.com/rooms/43624046',
     heroSubtitle: 'Short-term stay · Point Breeze · Pittsburgh',
     rating: 4.88,
     reviewCount: 120,
@@ -273,6 +279,7 @@ export const properties: Property[] = [
     cardDescription: 'A garden-facing suite with two balconies and a private bath',
     cardImage: cardGuesthouse,
     heroImage: heroPbghGarden,
+    airbnbUrl: 'https://www.airbnb.com/rooms/44153085',
     heroSubtitle: 'Short-term stay · Point Breeze · Pittsburgh',
     rating: 4.88,
     reviewCount: 120,
