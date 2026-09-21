@@ -6,7 +6,7 @@ import neighborhoodBed from '../assets/neighborhood-bed.jpg'
 import ReviewCard from '../components/ReviewCard'
 import Faq from '../components/Faq'
 import CtaBand from '../components/CtaBand'
-import { featuredProperties, properties } from '../data/properties'
+import { featuredProperties } from '../data/properties'
 
 const featuredCardOverrides: Record<string, { name: string; cardDescription: string }> = {
   'pbgh-sunrise': {
@@ -40,28 +40,6 @@ export default function HomePage() {
           <Link to="/properties" className={styles.heroButton}>
             Explore Properties
           </Link>
-
-          <div className={styles.locationField}>
-            <label className={styles.locationLabel} htmlFor="location-select">
-              Locations
-            </label>
-            <div className={styles.locationSelectWrap}>
-              <svg className={styles.locationIcon} width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path d="M8 1.5c-2.4 0-4.4 2-4.4 4.4 0 3.3 4.4 8.6 4.4 8.6s4.4-5.3 4.4-8.6c0-2.4-2-4.4-4.4-4.4Z" stroke="white" strokeWidth="1.2" />
-                <circle cx="8" cy="5.9" r="1.6" stroke="white" strokeWidth="1.2" />
-              </svg>
-              <select className={styles.locationSelect} id="location-select" defaultValue={properties[0].slug}>
-                {properties.map((property) => (
-                  <option key={property.slug} value={property.slug}>
-                    {property.name}
-                  </option>
-                ))}
-              </select>
-              <svg className={styles.chevron} width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                <path d="M3 5.5 7 9l4-3.5" stroke="white" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </div>
-          </div>
         </div>
       </section>
 
