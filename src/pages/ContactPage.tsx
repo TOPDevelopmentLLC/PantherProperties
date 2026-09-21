@@ -33,7 +33,9 @@ export default function ContactPage() {
                 </span>
                 <div>
                   <p className={styles.infoLabel}>Phone number:</p>
-                  <p className={styles.infoValue}>+1 (412) 807-0883</p>
+                  <p className={styles.infoValue}>
+                    <a href="tel:+14128070883">+1 (412) 807-0883</a>
+                  </p>
                 </div>
               </div>
 
@@ -46,7 +48,9 @@ export default function ContactPage() {
                 </span>
                 <div>
                   <p className={styles.infoLabel}>Email Address:</p>
-                  <p className={styles.infoValue}>PointBreezeGuestHouse@gmail.com</p>
+                  <p className={styles.infoValue}>
+                    <a href="mailto:PointBreezeGuestHouse@gmail.com">PointBreezeGuestHouse@gmail.com</a>
+                  </p>
                 </div>
               </div>
 

@@ -69,6 +69,14 @@
   color: var(--color-ink);
 }
 
+.infoValue a {
+  text-decoration: none;
+}
+
+.infoValue a:hover {
+  text-decoration: underline;
+}
+
 .formCard {
   background: var(--color-white);
   border-radius: var(--radius-md);
