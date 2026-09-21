@@ -137,12 +137,17 @@ export default function PropertyDetailPage() {
                 </p>
                 <p className={styles.cardNote}>Only platforms available for this property are shown. No dates are preselected.</p>
                 <div className={styles.bookingButtons}>
-                  <a className={styles.bookPrimary} href="https://www.airbnb.com" target="_blank" rel="noreferrer">
+                  <a className={styles.bookPrimary} href={property.airbnbUrl} target="_blank" rel="noreferrer">
                     Book on Airbnb
                   </a>
-                  <button type="button" className={styles.bookSecondary}>
+                  <a
+                    className={styles.bookSecondary}
+                    href="https://direct-book.com/properties/pantherproperties"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     View direct booking options
-                  </button>
+                  </a>
                   <Link to="/contact" className={styles.bookSecondary}>
                     Contact Us
                   </Link>

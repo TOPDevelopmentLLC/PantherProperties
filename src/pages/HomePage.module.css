@@ -26,8 +26,11 @@
 }
 
 .heroInner {
-  padding: 64px 0;
+  flex: 0 0 620px;
+  padding: 64px 24px;
   max-width: 620px;
+  margin-left: max(0px, calc((100% - var(--max-width)) / 2));
+  margin-right: auto;
 }
 
 .heroEyebrow {
@@ -65,52 +68,6 @@
   font-size: 0.95rem;
   text-decoration: none;
   margin-bottom: 36px;
-}
-
-.locationField {
-  max-width: 340px;
-}
-
-.locationLabel {
-  display: block;
-  font-weight: 600;
-  font-size: 0.9rem;
-  margin-bottom: 10px;
-}
-
-.locationSelectWrap {
-  position: relative;
-}
-
-.locationIcon {
-  position: absolute;
-  left: 14px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-}
-
-.locationSelect {
-  width: 100%;
-  appearance: none;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  color: var(--color-white);
-  padding: 13px 40px 13px 42px;
-  border-radius: var(--radius-sm);
-  font-size: 0.95rem;
-}
-
-.locationSelect option {
-  color: var(--color-ink);
-}
-
-.chevron {
-  position: absolute;
-  right: 14px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
 }
 
 .about {
