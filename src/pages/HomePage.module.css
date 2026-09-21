@@ -1,0 +1,468 @@
+.hero {
+  position: relative;
+  min-height: 640px;
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.heroVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(10, 12, 10, 0.55) 0%, rgba(10, 12, 10, 0.25) 55%, rgba(10, 12, 10, 0.15) 100%);
+  z-index: -1;
+}
+
+.heroInner {
+  padding: 64px 0;
+  max-width: 620px;
+}
+
+.heroEyebrow {
+  letter-spacing: 0.1em;
+  font-size: 1rem;
+  margin-bottom: 16px;
+  color: var(--color-text-on-dark);
+}
+
+.heroTitle {
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 3.25rem;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin-bottom: 20px;
+}
+
+.heroSubtitle {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 46ch;
+  margin-bottom: 28px;
+}
+
+.heroButton {
+  display: inline-block;
+  background: var(--color-white);
+  color: var(--color-ink);
+  padding: 15px 30px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  margin-bottom: 36px;
+}
+
+.locationField {
+  max-width: 340px;
+}
+
+.locationLabel {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.locationSelectWrap {
+  position: relative;
+}
+
+.locationIcon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.locationSelect {
+  width: 100%;
+  appearance: none;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: var(--color-white);
+  padding: 13px 40px 13px 42px;
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+}
+
+.locationSelect option {
+  color: var(--color-ink);
+}
+
+.chevron {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.about {
+  padding: 96px 0;
+  background: var(--color-paper);
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.eyebrow {
+
+  letter-spacing: 0.1em;
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin-bottom: 14px;
+  display: block;
+}
+
+.aboutTitle {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  line-height: 1.15;
+}
+
+.aboutText {
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  max-width: 52ch;
+}
+
+.textLink {
+  text-decoration: none;
+  color: var(--color-ink);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--color-ink);
+  padding-bottom: 2px;
+}
+
+.aboutImage {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.aboutImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.properties {
+  padding: 96px 0;
+  background: var(--color-cream);
+}
+
+.propertiesHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.propertiesTitle {
+  font-size: 2.5rem;
+}
+
+.allLink {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  color: var(--color-ink);
+  font-weight: 600;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--color-ink);
+  padding-bottom: 2px;
+}
+
+.propertyGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.propertyCard {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.propertyImage {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.propertyImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.propertyBody {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.propertyName {
+  font-size: 1.3rem;
+}
+
+.propertyDescription {
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.viewProperty {
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.neighborhood {
+  position: relative;
+  padding: 120px 24px;
+  text-align: center;
+  color: var(--color-white);
+  background-size: cover;
+  background-position: center;
+  isolation: isolate;
+}
+
+.neighborhood::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 14, 10, 0.55);
+  z-index: -1;
+}
+
+.neighborhoodEyebrow {
+
+  letter-spacing: 0.1em;
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+  color: var(--color-text-on-dark);
+}
+
+.neighborhoodTitle {
+  color: var(--color-white);
+  font-size: 3rem;
+  margin-bottom: 18px;
+}
+
+.neighborhoodText {
+  max-width: 620px;
+  margin: 0 auto 32px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.neighborhoodButton {
+  display: inline-block;
+  background: var(--color-white);
+  color: var(--color-ink);
+  padding: 15px 30px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.reviewsSection {
+  padding: 96px 0;
+  background: var(--color-cream);
+}
+
+.reviewsHeader {
+  margin-bottom: 40px;
+}
+
+.reviewsTitle {
+  font-size: 2.5rem;
+}
+
+.reviewGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.readAll {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.livable {
+  background: var(--color-ink);
+  color: var(--color-text-on-dark-muted);
+  padding: 96px 0;
+}
+
+.livableGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.livableTitle {
+  color: var(--color-white);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  line-height: 1.15;
+}
+
+.livableText {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 28px;
+  max-width: 48ch;
+}
+
+.livableLists {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 32px;
+}
+
+.livableLists ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+}
+
+.livableLists li {
+  font-size: 0.95rem;
+  color: var(--color-text-on-dark);
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.livableLists li::before {
+  content: '•';
+  color: var(--color-text-on-dark-muted);
+}
+
+.livableImage {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.livableImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.livableBadge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(0, 0, 0, 0.55);
+  color: var(--color-white);
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+@media (max-width: 900px) {
+  .aboutGrid,
+  .livableGrid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .aboutImage {
+    order: -1;
+  }
+
+  .propertyGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .reviewGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .livableLists {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    min-height: 560px;
+  }
+
+  .heroTitle {
+    font-size: 2.25rem;
+  }
+
+  .aboutTitle,
+  .propertiesTitle,
+  .reviewsTitle,
+  .neighborhoodTitle,
+  .livableTitle {
+    font-size: 1.85rem;
+  }
+
+  .propertyGrid,
+  .reviewGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .livableLists {
+    grid-template-columns: 1fr;
+  }
+
+  .neighborhood {
+    padding: 80px 20px;
+  }
+}
