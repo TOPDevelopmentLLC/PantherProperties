@@ -8,10 +8,11 @@ import Faq from '../components/Faq'
 import CtaBand from '../components/CtaBand'
 import { featuredProperties } from '../data/properties'
 
-const featuredCardOverrides: Record<string, { name: string; cardDescription: string }> = {
+const featuredCardOverrides: Record<string, { name: string; cardDescription: string; to?: string }> = {
   'pbgh-sunrise': {
     name: 'Guest House B&B',
     cardDescription: 'Wake up to warm eastern light in this serene upper-floor unit',
+    to: '/properties#guesthouse-bnb',
   },
 }
 import { reviews } from '../data/reviews'
@@ -84,8 +85,9 @@ export default function HomePage() {
               const override = featuredCardOverrides[property.slug]
               const name = override?.name ?? property.name
               const cardDescription = override?.cardDescription ?? property.cardDescription
+              const to = override?.to ?? `/properties/${property.slug}`
               return (
-                <Link key={property.slug} to={`/properties/${property.slug}`} className={styles.propertyCard}>
+                <Link key={property.slug} to={to} className={styles.propertyCard}>
                   <div className={styles.propertyImage}>
                     <img src={property.cardImage} alt={name} />
                   </div>

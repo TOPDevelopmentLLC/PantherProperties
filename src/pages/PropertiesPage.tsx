@@ -21,7 +21,12 @@ export default function PropertiesPage() {
 
           <div className={styles.grid}>
             {properties.map((property) => (
-              <Link key={property.slug} to={`/properties/${property.slug}`} className={styles.card}>
+              <Link
+                key={property.slug}
+                id={property.slug === 'pbgh-sunrise' ? 'guesthouse-bnb' : undefined}
+                to={`/properties/${property.slug}`}
+                className={styles.card}
+              >
                 <div className={styles.cardImage}>
                   <img src={property.gridImage ?? property.heroImage} alt={property.name} />
                 </div>
