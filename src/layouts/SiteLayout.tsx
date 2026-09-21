@@ -124,7 +124,7 @@ export default function SiteLayout() {
           </div>
 
           <div className={styles.footerBottom}>
-            <p>&copy; 2026 PCCI. All rights reserved.</p>
+            <p>&copy; 2026 PBGH. All rights reserved.</p>
           </div>
         </div>
       </footer>
