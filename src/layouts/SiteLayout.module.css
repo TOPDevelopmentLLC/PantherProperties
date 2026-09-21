@@ -181,6 +181,14 @@
   margin-bottom: 6px;
 }
 
+.contactInfo p a {
+  text-decoration: none;
+}
+
+.contactInfo p a:hover {
+  color: var(--color-text-on-dark);
+}
+
 .footerCta {
   display: flex;
   flex-direction: column;

@@ -105,8 +105,8 @@ export default function SiteLayout() {
             <div className={styles.contactBlock}>
               <div className={styles.contactInfo}>
                 <p className={styles.footerHeading}>Contact</p>
-                <p>PointBreezeGuestHouse@gmail.com</p>
-                <p>+1.412.807.0883</p>
+                <p><a href="mailto:PointBreezeGuestHouse@gmail.com">PointBreezeGuestHouse@gmail.com</a></p>
+                <p><a href="tel:+14128070883">+1.412.807.0883</a></p>
                 <p>
                   6412 Darlington Rd
                   <br />
