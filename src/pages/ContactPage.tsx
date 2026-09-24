@@ -63,7 +63,7 @@ export default function ContactPage() {
                 </span>
                 <div>
                   <p className={styles.infoLabel}>Location:</p>
-                  <p className={styles.infoValue}>6412 Darlington Rd Pittsburgh, PA 15217</p>
+                  <p className={styles.infoValue}>Pittsburgh, PA</p>
                 </div>
               </div>
             </div>
