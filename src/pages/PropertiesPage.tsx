@@ -29,13 +29,13 @@ export default function PropertiesPage() {
               >
                 <div className={styles.cardImage}>
                   <img src={property.gridImage ?? property.heroImage} alt={property.name} />
-                </div>
-                <div className={styles.cardFooter}>
-                  <div>
+                  <div className={styles.cardLabel}>
                     <p className={styles.cardLocation}>{property.neighborhood}</p>
                     <h2 className={styles.cardName}>{property.name}</h2>
-                    <p className={styles.cardDescription}>{property.cardDescription}</p>
                   </div>
+                </div>
+                <div className={styles.cardFooter}>
+                  <p className={styles.cardDescription}>{property.cardDescription}</p>
                   <span className={styles.arrowButton} aria-hidden="true">&rarr;</span>
                 </div>
               </Link>
