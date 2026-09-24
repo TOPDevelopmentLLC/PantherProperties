@@ -107,11 +107,7 @@ export default function SiteLayout() {
                 <p className={styles.footerHeading}>Contact</p>
                 <p><a href="mailto:PointBreezeGuestHouse@gmail.com">PointBreezeGuestHouse@gmail.com</a></p>
                 <p><a href="tel:+14128070883">+1.412.807.0883</a></p>
-                <p>
-                  6412 Darlington Rd
-                  <br />
-                  Pittsburgh, PA 15217
-                </p>
+                <p>Pittsburgh, PA</p>
               </div>
 
               <div className={styles.footerCta}>

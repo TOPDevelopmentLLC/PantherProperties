@@ -126,6 +126,34 @@
   object-fit: cover;
 }
 
+.locations {
+  padding: 96px 0;
+  background: var(--color-cream);
+}
+
+.locationsTitle {
+  font-size: 2.5rem;
+  margin-bottom: 32px;
+  line-height: 1.15;
+}
+
+.locationsMapEmbed {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.locationsMapEmbed iframe {
+  position: absolute;
+  top: -60px;
+  left: 0;
+  width: 100%;
+  height: calc(100% + 60px);
+  border: 0;
+  display: block;
+}
+
 .properties {
   padding: 96px 0;
   background: var(--color-cream);

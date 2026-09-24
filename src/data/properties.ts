@@ -63,7 +63,6 @@ export interface Property {
   amenities: string[]
   checkIn: string
   checkOut: string
-  maxGuests: string
   safety: string[]
   bedroomTitle: string
   bedroomBeds: string
@@ -74,6 +73,7 @@ export interface Property {
   hostBlurb: string
   locationTitle: string
   locationBlurb: string
+  address?: string
   galleryImages: string[]
 }
 
@@ -107,7 +107,6 @@ export const properties: Property[] = [
     amenities: ['Kitchen', 'Wi-Fi', 'Dedicated workspace', 'Free parking garage', 'Pets allowed', 'Private backyard'],
     checkIn: '3:00 PM–10:00 PM',
     checkOut: 'Before 11:00 AM',
-    maxGuests: '2 guests maximum',
     safety: ['Exterior security cameras', 'Smoke and CO alarms'],
     bedroomTitle: 'Bedroom',
     bedroomBeds: '1 sofa bed · 1 toddler bed',
@@ -118,6 +117,7 @@ export const properties: Property[] = [
     hostBlurb: 'A responsive local host who helps guests with travel logistics, local advice, and directions.',
     locationTitle: 'Squirrel Hill, Pittsburgh',
     locationBlurb: "The property is in Squirrel Hill, close to Frick Park, neighborhood shops, restaurants, and Pittsburgh's East End destinations.",
+    address: '6412 Darlington Road, Pittsburgh, PA 15217',
     galleryImages: [galleryLivingRoom, galleryBackyard, galleryKitchen1, galleryKitchen2, galleryBathroom],
   },
   {
@@ -142,10 +142,9 @@ export const properties: Property[] = [
       { title: 'Easy booking', description: 'Use the booking options below to check availability.' },
       { title: 'Guest experience', description: 'A straightforward stay with support from the Point Breeze Guest House host.' },
     ],
-    amenities: ['Kitchen', 'Wi-Fi', 'Dedicated workspace', 'Free parking garage', 'Pets allowed', 'Private backyard'],
+    amenities: ['Kitchen', 'Wi-Fi', 'Dedicated workspace', 'Pets allowed', 'Private backyard'],
     checkIn: '3:00 PM–10:00 PM',
     checkOut: 'Before 11:00 AM',
-    maxGuests: '2 guests maximum',
     safety: ['Exterior security cameras', 'Smoke and CO alarms'],
     bedroomTitle: 'Bedroom',
     bedroomBeds: 'Sleeping arrangements for this property',
@@ -156,6 +155,7 @@ export const properties: Property[] = [
     hostBlurb: "Point Breeze Guest House provides comfortable short-term stays in Pittsburgh's East End.",
     locationTitle: 'Point Breeze, Pittsburgh',
     locationBlurb: "Located in Pittsburgh's East End, with convenient access to nearby neighborhoods, universities, hospitals, and local destinations.",
+    address: '6839 Meade Street, Pittsburgh, PA 15208',
     galleryImages: [tinyHouseGalleryExterior, tinyHouseGalleryBedroom, tinyHouseGallerySwing, tinyHouseGalleryPorch, tinyHouseGalleryExterior2],
   },
   {
@@ -183,7 +183,6 @@ export const properties: Property[] = [
     amenities: ['Kitchen', 'Wi-Fi', 'Dedicated workspace', 'Free parking garage', 'Pets allowed', 'Private backyard'],
     checkIn: '3:00 PM–10:00 PM',
     checkOut: 'Before 11:00 AM',
-    maxGuests: '2 guests maximum',
     safety: ['Exterior security cameras', 'Smoke and CO alarms'],
     bedroomTitle: 'Bedroom',
     bedroomBeds: 'Sleeping arrangements for this property',
@@ -194,6 +193,7 @@ export const properties: Property[] = [
     hostBlurb: "Point Breeze Guest House provides comfortable short-term stays in Pittsburgh's East End.",
     locationTitle: 'Point Breeze, Pittsburgh',
     locationBlurb: "Located in Pittsburgh's East End, with convenient access to nearby neighborhoods, universities, hospitals, and local destinations.",
+    address: '123 North Linden Avenue, Pittsburgh, PA 15208',
     galleryImages: [pbghSunriseGalleryBedroom, pbghSunriseGalleryExterior, pbghSunriseGalleryWindow, pbghSunriseGalleryDoor, pbghSunriseGalleryBathroom],
   },
   {
@@ -221,7 +221,6 @@ export const properties: Property[] = [
     amenities: ['Kitchen', 'Wi-Fi', 'Dedicated workspace', 'Free parking garage', 'Pets allowed', 'Private backyard'],
     checkIn: '3:00 PM–10:00 PM',
     checkOut: 'Before 11:00 AM',
-    maxGuests: '2 guests maximum',
     safety: ['Exterior security cameras', 'Smoke and CO alarms'],
     bedroomTitle: 'Bedroom',
     bedroomBeds: 'Sleeping arrangements for this property',
@@ -259,7 +258,6 @@ export const properties: Property[] = [
     amenities: ['Kitchen', 'Wi-Fi', 'Dedicated workspace', 'Free parking garage', 'Pets allowed', 'Private backyard'],
     checkIn: '3:00 PM–10:00 PM',
     checkOut: 'Before 11:00 AM',
-    maxGuests: '2 guests maximum',
     safety: ['Exterior security cameras', 'Smoke and CO alarms'],
     bedroomTitle: 'Bedroom',
     bedroomBeds: 'Sleeping arrangements for this property',
@@ -270,6 +268,7 @@ export const properties: Property[] = [
     hostBlurb: "Point Breeze Guest House provides comfortable short-term stays in Pittsburgh's East End.",
     locationTitle: 'Point Breeze, Pittsburgh',
     locationBlurb: "Located in Pittsburgh's East End, with convenient access to nearby neighborhoods, universities, hospitals, and local destinations.",
+    address: '6716 Thomas Boulevard, Pittsburgh, PA 15208',
     galleryImages: [pbghBakeryGalleryBalcony, pbghBakeryGalleryShelf, pbghBakeryGallerySink, pbghBakeryGallerySkylight, pbghBakeryGalleryShower],
   },
   {
@@ -297,7 +296,6 @@ export const properties: Property[] = [
     amenities: ['Kitchen', 'Wi-Fi', 'Dedicated workspace', 'Free parking garage', 'Pets allowed', 'Private backyard'],
     checkIn: '3:00 PM–10:00 PM',
     checkOut: 'Before 11:00 AM',
-    maxGuests: '2 guests maximum',
     safety: ['Exterior security cameras', 'Smoke and CO alarms'],
     bedroomTitle: 'Bedroom',
     bedroomBeds: 'Sleeping arrangements for this property',
@@ -308,6 +306,7 @@ export const properties: Property[] = [
     hostBlurb: "Point Breeze Guest House provides comfortable short-term stays in Pittsburgh's East End.",
     locationTitle: 'Point Breeze, Pittsburgh',
     locationBlurb: "Located in Pittsburgh's East End, with convenient access to nearby neighborhoods, universities, hospitals, and local destinations.",
+    address: '123 North Linden Avenue, Pittsburgh, PA 15208',
     galleryImages: [pbghGardenGalleryLivingroom, pbghGardenGalleryBedroom, pbghGardenGalleryBathroom, pbghGardenGalleryDeck, pbghGardenGalleryHallway],
   },
 ]

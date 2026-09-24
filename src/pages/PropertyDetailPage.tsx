@@ -23,7 +23,7 @@ export default function PropertyDetailPage() {
   }
 
   const [mainImage, ...thumbImages] = property.galleryImages
-  const mapQuery = encodeURIComponent(`${property.locationTitle}, USA`)
+  const mapQuery = encodeURIComponent(property.address ?? `${property.locationTitle}, USA`)
   const mapEmbedSrc = `https://maps.google.com/maps?q=${mapQuery}&z=14&output=embed`
   const mapLinkHref = isApplePlatform()
     ? `https://maps.apple.com/?q=${mapQuery}`
@@ -109,12 +109,6 @@ export default function PropertyDetailPage() {
                   <ul className={styles.thingsToKnowList}>
                     <li>Check-in: {property.checkIn}</li>
                     <li>Checkout {property.checkOut}</li>
-                  </ul>
-                </div>
-                <div>
-                  <p className={styles.thingsToKnowHeading}>Guests</p>
-                  <ul className={styles.thingsToKnowList}>
-                    <li>{property.maxGuests}</li>
                   </ul>
                 </div>
                 <div>

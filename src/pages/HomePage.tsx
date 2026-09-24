@@ -44,6 +44,21 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className={styles.locations}>
+        <div className="container">
+          <span className={styles.eyebrow}>Find Us</span>
+          <h2 className={styles.locationsTitle}>Our Locations</h2>
+          <div className={styles.locationsMapEmbed}>
+            <iframe
+              title="Map of all Point Breeze Guest House locations"
+              src="https://www.google.com/maps/d/u/0/embed?mid=1djhZuzlPkczCQrXVaMBXGUXsHKEFiEU&ehbc=2E312F&noprof=1"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </div>
+      </section>
+
       <section className={styles.about}>
         <div className={`container ${styles.aboutGrid}`}>
           <div>
