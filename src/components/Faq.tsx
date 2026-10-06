@@ -1,10 +1,12 @@
-import { useState } from 'react'
+import { useState, type ReactNode } from 'react'
 import styles from './Faq.module.css'
 
 interface FaqItem {
   question: string
-  answer: string
+  answer: ReactNode
 }
+
+const directBookingUrl = 'https://direct-book.com/properties/pantherproperties'
 
 const faqItems: FaqItem[] = [
   {
@@ -14,8 +16,14 @@ const faqItems: FaqItem[] = [
   },
   {
     question: 'How can I make a reservation at Point Breeze Guest House?',
-    answer:
-      'You can book directly through Airbnb, or reach out to us through the Contact page and we will help you find the right property and dates.',
+    answer: (
+      <>
+        Our properties are listed on various sites or you can book direct at:{' '}
+        <a href={directBookingUrl} target="_blank" rel="noreferrer">
+          {directBookingUrl}
+        </a>
+      </>
+    ),
   },
   {
     question: 'Is there parking available at Point Breeze Guest House?',

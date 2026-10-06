@@ -53,6 +53,8 @@ export interface Property {
   heroImage: string
   gridImage?: string
   airbnbUrl: string
+  vrboUrl?: string
+  bookingUrl?: string
   heroSubtitle: string
   rating: number
   reviewCount: number
@@ -104,7 +106,7 @@ export const properties: Property[] = [
       { title: 'Other things to note', description: 'Access is not wheelchair friendly; stairs lead to the apartment.' },
       { title: 'The space', description: 'A comfy efficiency with a full shower and bath, a large living area, a high-quality futon/sofa, and a small toddler/child foldout sleeper.' },
     ],
-    amenities: ['Kitchen', 'Wi-Fi', 'Dedicated workspace', 'Free parking garage', 'Pets allowed', 'Private backyard'],
+    amenities: ['Kitchen', 'Wi-Fi', 'Dedicated workspace', 'EV charging', 'Pets allowed', 'Private backyard'],
     checkIn: '3:00 PM–10:00 PM',
     checkOut: 'Before 11:00 AM',
     safety: ['Exterior security cameras', 'Smoke and CO alarms'],
@@ -128,6 +130,7 @@ export const properties: Property[] = [
     cardImage: cardTinyHouse,
     heroImage: heroTinyHouse,
     airbnbUrl: 'https://www.airbnb.com/rooms/957761741551479770',
+    vrboUrl: 'https://www.vrbo.com/4999402',
     heroSubtitle: 'Short-term stay · Point Breeze · Pittsburgh',
     rating: 4.88,
     reviewCount: 120,
@@ -166,6 +169,7 @@ export const properties: Property[] = [
     cardImage: cardGuesthouse,
     heroImage: heroPbghSunrise,
     airbnbUrl: 'https://www.airbnb.com/rooms/47486756',
+    bookingUrl: 'https://www.booking.com/hotel/us/point-breeze-guest-house.html?hotel_id=6475130',
     heroSubtitle: 'Short-term stay · Point Breeze · Pittsburgh',
     rating: 4.88,
     reviewCount: 120,
@@ -180,7 +184,7 @@ export const properties: Property[] = [
       { title: 'Easy booking', description: 'Use the booking options below to check availability.' },
       { title: 'Guest experience', description: 'A straightforward stay with support from the Point Breeze Guest House host.' },
     ],
-    amenities: ['Kitchen', 'Wi-Fi', 'Dedicated workspace', 'Free parking garage', 'Pets allowed', 'Private backyard'],
+    amenities: ['Kitchen', 'Wi-Fi', 'Dedicated workspace', 'EV charging', 'Pets allowed', 'Private backyard'],
     checkIn: '3:00 PM–10:00 PM',
     checkOut: 'Before 11:00 AM',
     safety: ['Exterior security cameras', 'Smoke and CO alarms'],
@@ -204,6 +208,7 @@ export const properties: Property[] = [
     cardImage: cardGuesthouse,
     heroImage: heroPbghEastView,
     airbnbUrl: 'https://www.airbnb.com/rooms/42703538',
+    bookingUrl: 'https://www.booking.com/hotel/us/point-breeze-guest-house.html?hotel_id=6475130',
     heroSubtitle: 'Short-term stay · Point Breeze · Pittsburgh',
     rating: 4.88,
     reviewCount: 120,
@@ -218,7 +223,7 @@ export const properties: Property[] = [
       { title: 'Easy booking', description: 'Use the booking options below to check availability.' },
       { title: 'Guest experience', description: 'A straightforward stay with support from the Point Breeze Guest House host.' },
     ],
-    amenities: ['Kitchen', 'Wi-Fi', 'Dedicated workspace', 'Free parking garage', 'Pets allowed', 'Private backyard'],
+    amenities: ['Kitchen', 'Wi-Fi', 'Dedicated workspace', 'EV charging', 'Pets allowed', 'Private backyard'],
     checkIn: '3:00 PM–10:00 PM',
     checkOut: 'Before 11:00 AM',
     safety: ['Exterior security cameras', 'Smoke and CO alarms'],
@@ -231,6 +236,7 @@ export const properties: Property[] = [
     hostBlurb: "Point Breeze Guest House provides comfortable short-term stays in Pittsburgh's East End.",
     locationTitle: 'Point Breeze, Pittsburgh',
     locationBlurb: "Located in Pittsburgh's East End, with convenient access to nearby neighborhoods, universities, hospitals, and local destinations.",
+    address: '123 North Linden Avenue, Pittsburgh, PA 15208',
     galleryImages: [galleryLivingRoom, galleryBackyard, galleryKitchen1, galleryKitchen2, galleryBathroom],
   },
   {
@@ -255,7 +261,7 @@ export const properties: Property[] = [
       { title: 'Easy booking', description: 'Use the booking options below to check availability.' },
       { title: 'Guest experience', description: 'A straightforward stay with support from the Point Breeze Guest House host.' },
     ],
-    amenities: ['Kitchen', 'Wi-Fi', 'Dedicated workspace', 'Free parking garage', 'Pets allowed', 'Private backyard'],
+    amenities: ['Kitchen', 'Wi-Fi', 'Dedicated workspace', 'Pets allowed', 'Private backyard'],
     checkIn: '3:00 PM–10:00 PM',
     checkOut: 'Before 11:00 AM',
     safety: ['Exterior security cameras', 'Smoke and CO alarms'],
@@ -279,6 +285,7 @@ export const properties: Property[] = [
     cardImage: cardGuesthouse,
     heroImage: heroPbghGarden,
     airbnbUrl: 'https://www.airbnb.com/rooms/44153085',
+    bookingUrl: 'https://www.booking.com/hotel/us/point-breeze-guest-house.html?hotel_id=6475130',
     heroSubtitle: 'Short-term stay · Point Breeze · Pittsburgh',
     rating: 4.88,
     reviewCount: 120,
@@ -293,7 +300,7 @@ export const properties: Property[] = [
       { title: 'Easy booking', description: 'Use the booking options below to check availability.' },
       { title: 'Guest experience', description: 'A straightforward stay with support from the Point Breeze Guest House host.' },
     ],
-    amenities: ['Kitchen', 'Wi-Fi', 'Dedicated workspace', 'Free parking garage', 'Pets allowed', 'Private backyard'],
+    amenities: ['Kitchen', 'Wi-Fi', 'Dedicated workspace', 'EV charging', 'Pets allowed', 'Private backyard'],
     checkIn: '3:00 PM–10:00 PM',
     checkOut: 'Before 11:00 AM',
     safety: ['Exterior security cameras', 'Smoke and CO alarms'],

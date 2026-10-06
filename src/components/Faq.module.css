@@ -84,6 +84,11 @@
   line-height: 1.6;
 }
 
+.answer a {
+  color: var(--color-ink);
+  font-weight: 600;
+}
+
 .answerWrapOpen .answer {
   padding-bottom: 22px;
 }
