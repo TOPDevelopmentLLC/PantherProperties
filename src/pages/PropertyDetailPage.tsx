@@ -150,7 +150,7 @@ export default function PropertyDetailPage() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    View direct booking options
+                    Book Direct and Save
                   </a>
                   <Link to="/contact" className={styles.bookSecondary}>
                     Contact Us
