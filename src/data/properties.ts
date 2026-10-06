@@ -53,6 +53,7 @@ export interface Property {
   heroImage: string
   gridImage?: string
   airbnbUrl: string
+  vrboUrl?: string
   heroSubtitle: string
   rating: number
   reviewCount: number
@@ -128,6 +129,7 @@ export const properties: Property[] = [
     cardImage: cardTinyHouse,
     heroImage: heroTinyHouse,
     airbnbUrl: 'https://www.airbnb.com/rooms/957761741551479770',
+    vrboUrl: 'https://www.vrbo.com/4999402',
     heroSubtitle: 'Short-term stay · Point Breeze · Pittsburgh',
     rating: 4.88,
     reviewCount: 120,

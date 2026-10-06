@@ -134,6 +134,11 @@ export default function PropertyDetailPage() {
                   <a className={styles.bookPrimary} href={property.airbnbUrl} target="_blank" rel="noreferrer">
                     Book on Airbnb
                   </a>
+                  {property.vrboUrl && (
+                    <a className={styles.bookSecondary} href={property.vrboUrl} target="_blank" rel="noreferrer">
+                      Book on VRBO
+                    </a>
+                  )}
                   <a
                     className={styles.bookSecondary}
                     href="https://direct-book.com/properties/pantherproperties"
@@ -149,7 +154,11 @@ export default function PropertyDetailPage() {
                 <p className={styles.hostMeta}>
                   Hosted by {property.hostName} · {property.hostYears} years hosting
                 </p>
-                <p className={styles.bookedByNote}>Booking.com and VRBO are hidden until property-specific links are supplied.</p>
+                <p className={styles.bookedByNote}>
+                  {property.vrboUrl
+                    ? 'Booking.com is hidden until a property-specific link is supplied.'
+                    : 'Booking.com and VRBO are hidden until property-specific links are supplied.'}
+                </p>
               </div>
 
               <div className={styles.sleepCard}>
