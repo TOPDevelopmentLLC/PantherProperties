@@ -54,6 +54,7 @@ export interface Property {
   gridImage?: string
   airbnbUrl: string
   vrboUrl?: string
+  bookingUrl?: string
   heroSubtitle: string
   rating: number
   reviewCount: number
@@ -168,6 +169,7 @@ export const properties: Property[] = [
     cardImage: cardGuesthouse,
     heroImage: heroPbghSunrise,
     airbnbUrl: 'https://www.airbnb.com/rooms/47486756',
+    bookingUrl: 'https://www.booking.com/hotel/us/point-breeze-guest-house.html?hotel_id=6475130',
     heroSubtitle: 'Short-term stay · Point Breeze · Pittsburgh',
     rating: 4.88,
     reviewCount: 120,
@@ -206,6 +208,7 @@ export const properties: Property[] = [
     cardImage: cardGuesthouse,
     heroImage: heroPbghEastView,
     airbnbUrl: 'https://www.airbnb.com/rooms/42703538',
+    bookingUrl: 'https://www.booking.com/hotel/us/point-breeze-guest-house.html?hotel_id=6475130',
     heroSubtitle: 'Short-term stay · Point Breeze · Pittsburgh',
     rating: 4.88,
     reviewCount: 120,
@@ -282,6 +285,7 @@ export const properties: Property[] = [
     cardImage: cardGuesthouse,
     heroImage: heroPbghGarden,
     airbnbUrl: 'https://www.airbnb.com/rooms/44153085',
+    bookingUrl: 'https://www.booking.com/hotel/us/point-breeze-guest-house.html?hotel_id=6475130',
     heroSubtitle: 'Short-term stay · Point Breeze · Pittsburgh',
     rating: 4.88,
     reviewCount: 120,

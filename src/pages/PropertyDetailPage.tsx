@@ -139,6 +139,11 @@ export default function PropertyDetailPage() {
                       Book on VRBO
                     </a>
                   )}
+                  {property.bookingUrl && (
+                    <a className={styles.bookSecondary} href={property.bookingUrl} target="_blank" rel="noreferrer">
+                      Book on Booking.com
+                    </a>
+                  )}
                   <a
                     className={styles.bookSecondary}
                     href="https://direct-book.com/properties/pantherproperties"
@@ -154,11 +159,18 @@ export default function PropertyDetailPage() {
                 <p className={styles.hostMeta}>
                   Hosted by {property.hostName} · {property.hostYears} years hosting
                 </p>
-                <p className={styles.bookedByNote}>
-                  {property.vrboUrl
-                    ? 'Booking.com is hidden until a property-specific link is supplied.'
-                    : 'Booking.com and VRBO are hidden until property-specific links are supplied.'}
-                </p>
+                {(() => {
+                  const hiddenPlatforms = [
+                    !property.vrboUrl && 'VRBO',
+                    !property.bookingUrl && 'Booking.com',
+                  ].filter(Boolean)
+                  return hiddenPlatforms.length > 0 ? (
+                    <p className={styles.bookedByNote}>
+                      {hiddenPlatforms.join(' and ')} {hiddenPlatforms.length > 1 ? 'are' : 'is'} hidden until
+                      property-specific {hiddenPlatforms.length > 1 ? 'links are' : 'link is'} supplied.
+                    </p>
+                  ) : null
+                })()}
               </div>
 
               <div className={styles.sleepCard}>
