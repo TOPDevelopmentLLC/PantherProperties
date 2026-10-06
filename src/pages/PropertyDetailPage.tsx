@@ -159,18 +159,6 @@ export default function PropertyDetailPage() {
                 <p className={styles.hostMeta}>
                   Hosted by {property.hostName} · {property.hostYears} years hosting
                 </p>
-                {(() => {
-                  const hiddenPlatforms = [
-                    !property.vrboUrl && 'VRBO',
-                    !property.bookingUrl && 'Booking.com',
-                  ].filter(Boolean)
-                  return hiddenPlatforms.length > 0 ? (
-                    <p className={styles.bookedByNote}>
-                      {hiddenPlatforms.join(' and ')} {hiddenPlatforms.length > 1 ? 'are' : 'is'} hidden until
-                      property-specific {hiddenPlatforms.length > 1 ? 'links are' : 'link is'} supplied.
-                    </p>
-                  ) : null
-                })()}
               </div>
 
               <div className={styles.sleepCard}>
