@@ -2,14 +2,61 @@ import { type FormEvent, useState } from 'react'
 import CtaBand from '../components/CtaBand'
 import styles from './ContactPage.module.css'
 
+const CONTACT_LAMBDA_URL = 'https://kw5f3ncvonsdcfuupoclag5itu0hbgjv.lambda-url.us-east-1.on.aws/'
+
+const propertyTypeLabels: Record<string, string> = {
+  'carriage-house-apartment': 'Carriage House Apartment',
+  'tiny-house': 'Tiny House',
+  'pbgh-sunrise': 'PBGH Sunrise',
+  'pbgh-east-view': 'PBGH East View',
+  'pbgh-bakery': 'PBGH Bakery',
+  'pbgh-garden': 'PBGH Garden',
+  'not-sure': 'an unspecified property',
+}
+
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    const formData = new FormData(event.currentTarget)
-    console.log('Contact form submitted', Object.fromEntries(formData))
-    setSubmitted(true)
+    setError(null)
+
+    const form = event.currentTarget
+    const formData = new FormData(form)
+    const firstName = String(formData.get('firstName') ?? '')
+    const email = String(formData.get('email') ?? '')
+    const phone = String(formData.get('phone') ?? '')
+    const message = String(formData.get('message') ?? '')
+    const propertyType = String(formData.get('propertyType') ?? '')
+    const propertyLabel = propertyTypeLabels[propertyType] ?? propertyType
+
+    setIsSubmitting(true)
+    try {
+      const response = await fetch(CONTACT_LAMBDA_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: firstName,
+          email,
+          phone,
+          subject: `New contact form submission from ${firstName} — ${propertyLabel}`,
+          message,
+        }),
+      })
+
+      if (!response.ok) {
+        throw new Error(`Request failed with status ${response.status}`)
+      }
+
+      form.reset()
+      setSubmitted(true)
+    } catch {
+      setError("Something went wrong sending your message. Please try again, or email us directly.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -124,8 +171,10 @@ export default function ContactPage() {
                   <textarea className={styles.textarea} id="message" name="message" placeholder="Enter your message" />
                 </div>
 
-                <button type="submit" className={styles.submitButton}>
-                  Submit
+                {error && <p className={styles.errorMessage}>{error}</p>}
+
+                <button type="submit" className={styles.submitButton} disabled={isSubmitting}>
+                  {isSubmitting ? 'Sending…' : 'Submit'}
                 </button>
               </form>
             )}
