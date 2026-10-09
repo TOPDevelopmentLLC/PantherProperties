@@ -26,7 +26,10 @@
 }
 
 .heroInner {
-  flex: 0 0 620px;
+  flex: 0 1 620px;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
   padding: 64px 24px;
   max-width: 620px;
   margin-left: max(0px, calc((100% - var(--max-width)) / 2));
@@ -35,7 +38,7 @@
 
 .heroEyebrow {
   letter-spacing: 0.1em;
-  font-size: 1rem;
+  font-size: clamp(0.85rem, 0.7rem + 0.4vw, 1.1rem);
   margin-bottom: 16px;
   color: var(--color-text-on-dark);
 }
@@ -44,14 +47,14 @@
   color: var(--color-white);
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 3.25rem;
+  font-size: clamp(2.25rem, 1.5rem + 2.5vw, 4rem);
   line-height: 1.1;
   letter-spacing: -0.01em;
   margin-bottom: 20px;
 }
 
 .heroSubtitle {
-  font-size: 1.05rem;
+  font-size: clamp(0.95rem, 0.85rem + 0.3vw, 1.2rem);
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.9);
   max-width: 46ch;
@@ -424,10 +427,6 @@
 @media (max-width: 640px) {
   .hero {
     min-height: 560px;
-  }
-
-  .heroTitle {
-    font-size: 2.25rem;
   }
 
   .aboutTitle,
