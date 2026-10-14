@@ -1,4 +1,4 @@
-import heroCarriageHouse from '../assets/properties/hero-carriage-house.jpg'
+import heroCarriageHouse from '../assets/properties/carriagehouse-hero-exterior.jpg'
 import heroTinyHouse from '../assets/properties/meade-hero-livingroom-wide.jpg'
 import heroPbghSunrise from '../assets/properties/sunrise-hero-bedroom-wide.jpg'
 import heroPbghEastView from '../assets/properties/eastview-hero-bedroom-wide.jpg'
@@ -10,11 +10,11 @@ import pbghEastViewGalleryDesk from '../assets/properties/eastview-gallery-desk.
 import heroPbghBakery from '../assets/properties/hero-pbgh-bakery.jpg'
 import heroPbghGarden from '../assets/properties/garden-hero-kitchenette-wide.jpg'
 
-import galleryLivingRoom from '../assets/properties/gallery-living-room.jpg'
-import galleryBackyard from '../assets/properties/gallery-backyard.jpg'
-import galleryKitchen1 from '../assets/properties/gallery-kitchen-1.jpg'
-import galleryKitchen2 from '../assets/properties/gallery-kitchen-2.jpg'
-import galleryBathroom from '../assets/properties/gallery-bathroom.jpg'
+import carriageHouseGalleryBed from '../assets/properties/carriagehouse-gallery-bed.jpg'
+import carriageHouseGalleryLivingWide from '../assets/properties/carriagehouse-gallery-living-wide.jpg'
+import carriageHouseGalleryKitchenette from '../assets/properties/carriagehouse-gallery-kitchenette.jpg'
+import carriageHouseGalleryBathroom from '../assets/properties/carriagehouse-gallery-bathroom.jpg'
+import carriageHouseGalleryCloset from '../assets/properties/carriagehouse-gallery-closet.jpg'
 
 import tinyHouseGalleryBedroom from '../assets/properties/meade-gallery-bedroom.jpg'
 import tinyHouseGalleryKitchen from '../assets/properties/meade-gallery-kitchen.jpg'
@@ -40,7 +40,6 @@ import pbghGardenGalleryBedroomWide from '../assets/properties/garden-gallery-be
 import pbghGardenGalleryBedroomBalcony from '../assets/properties/garden-gallery-bedroom-balcony.jpg'
 import pbghGardenGalleryHallway from '../assets/properties/garden-gallery-hallway.jpg'
 
-import cardCarriageHouse from '../assets/carriage-house-card.jpg'
 import cardTinyHouse from '../assets/tiny-house-card.jpg'
 import cardGuesthouse from '../assets/guesthouse-card.jpg'
 
@@ -90,9 +89,9 @@ export const properties: Property[] = [
     name: 'Carriage House Apartment',
     neighborhood: 'Squirrel Hill, Pittsburgh',
     cardDescription: 'A charming converted carriage house with private garden access.',
-    cardImage: cardCarriageHouse,
+    cardImage: carriageHouseGalleryBed,
     heroImage: heroCarriageHouse,
-    gridImage: cardCarriageHouse,
+    gridImage: carriageHouseGalleryBed,
     airbnbUrl: 'https://www.airbnb.com/rooms/45548553',
     heroSubtitle: 'Tiny home · 2 guests · 1 bedroom · 2 beds · 1 bath',
     rating: 4.88,
@@ -125,7 +124,7 @@ export const properties: Property[] = [
     locationTitle: 'Squirrel Hill, Pittsburgh',
     locationBlurb: "The property is in Squirrel Hill, close to Frick Park, neighborhood shops, restaurants, and Pittsburgh's East End destinations.",
     address: '6412 Darlington Road, Pittsburgh, PA 15217',
-    galleryImages: [galleryLivingRoom, galleryBackyard, galleryKitchen1, galleryKitchen2, galleryBathroom],
+    galleryImages: [carriageHouseGalleryBed, carriageHouseGalleryLivingWide, carriageHouseGalleryKitchenette, carriageHouseGalleryBathroom, carriageHouseGalleryCloset],
   },
   {
     slug: 'tiny-house',
