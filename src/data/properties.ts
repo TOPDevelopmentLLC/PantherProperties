@@ -43,6 +43,38 @@ import pbghGardenGalleryHallway from '../assets/properties/garden-gallery-hallwa
 import cardTinyHouse from '../assets/tiny-house-card.jpg'
 import cardGuesthouse from '../assets/guesthouse-card.jpg'
 
+function sortedValues(modules: Record<string, string>) {
+  return Object.keys(modules)
+    .sort()
+    .map((key) => modules[key])
+}
+
+const carriageHouseAllPhotos = sortedValues(
+  import.meta.glob<string>('../assets/properties/carriagehouse-*.jpg', { eager: true, import: 'default' }),
+)
+const tinyHouseAllPhotos = sortedValues(
+  import.meta.glob<string>('../assets/properties/meade-*.jpg', { eager: true, import: 'default' }),
+)
+const pbghSunriseAllPhotos = sortedValues(
+  import.meta.glob<string>('../assets/properties/sunrise-*.jpg', { eager: true, import: 'default' }),
+)
+const pbghEastViewAllPhotos = sortedValues(
+  import.meta.glob<string>('../assets/properties/eastview-*.jpg', { eager: true, import: 'default' }),
+)
+const pbghGardenAllPhotos = sortedValues(
+  import.meta.glob<string>('../assets/properties/garden-*.jpg', { eager: true, import: 'default' }),
+)
+const lindenCommonAreaPhotos = sortedValues(
+  import.meta.glob<string>('../assets/properties/linden-*.jpg', { eager: true, import: 'default' }),
+)
+const pbghBakeryAllPhotos = [
+  pbghBakeryGalleryBalcony,
+  pbghBakeryGalleryShelf,
+  pbghBakeryGallerySink,
+  pbghBakeryGallerySkylight,
+  pbghBakeryGalleryShower,
+]
+
 export interface ListingHighlight {
   title: string
   description: string
@@ -81,6 +113,7 @@ export interface Property {
   locationBlurb: string
   address?: string
   galleryImages: string[]
+  allPhotos: string[]
 }
 
 export const properties: Property[] = [
@@ -125,6 +158,7 @@ export const properties: Property[] = [
     locationBlurb: "The property is in Squirrel Hill, close to Frick Park, neighborhood shops, restaurants, and Pittsburgh's East End destinations.",
     address: '6412 Darlington Road, Pittsburgh, PA 15217',
     galleryImages: [carriageHouseGalleryBed, carriageHouseGalleryLivingWide, carriageHouseGalleryKitchenette, carriageHouseGalleryBathroom, carriageHouseGalleryCloset],
+    allPhotos: carriageHouseAllPhotos,
   },
   {
     slug: 'tiny-house',
@@ -164,6 +198,7 @@ export const properties: Property[] = [
     locationBlurb: "Located in Pittsburgh's East End, with convenient access to nearby neighborhoods, universities, hospitals, and local destinations.",
     address: '6839 Meade Street, Pittsburgh, PA 15208',
     galleryImages: [tinyHouseGalleryBedroom, tinyHouseGalleryKitchen, tinyHouseGalleryBathroom, tinyHouseGalleryPorchSwing, tinyHouseGalleryWorkspace],
+    allPhotos: tinyHouseAllPhotos,
   },
   {
     slug: 'pbgh-sunrise',
@@ -203,6 +238,7 @@ export const properties: Property[] = [
     locationBlurb: "Located in Pittsburgh's East End, with convenient access to nearby neighborhoods, universities, hospitals, and local destinations.",
     address: '123 North Linden Avenue, Pittsburgh, PA 15208',
     galleryImages: [pbghSunriseGalleryBedroom, pbghSunriseGalleryBedroomAlt, pbghSunriseGalleryBathroom, pbghSunriseGalleryWorkspace, pbghSunriseGalleryKitchenette],
+    allPhotos: [...pbghSunriseAllPhotos, ...lindenCommonAreaPhotos],
   },
   {
     slug: 'pbgh-east-view',
@@ -242,6 +278,7 @@ export const properties: Property[] = [
     locationBlurb: "Located in Pittsburgh's East End, with convenient access to nearby neighborhoods, universities, hospitals, and local destinations.",
     address: '123 North Linden Avenue, Pittsburgh, PA 15208',
     galleryImages: [pbghEastViewGalleryBedroom2, pbghEastViewGalleryKitchenette, pbghEastViewGalleryBathroom, pbghEastViewGalleryBedroomAlt, pbghEastViewGalleryDesk],
+    allPhotos: [...pbghEastViewAllPhotos, ...lindenCommonAreaPhotos],
   },
   {
     slug: 'pbgh-bakery',
@@ -281,6 +318,7 @@ export const properties: Property[] = [
     locationBlurb: "Located in Pittsburgh's East End, with convenient access to nearby neighborhoods, universities, hospitals, and local destinations.",
     address: '123 North Linden Avenue, Pittsburgh, PA 15208',
     galleryImages: [pbghBakeryGalleryBalcony, pbghBakeryGalleryShelf, pbghBakeryGallerySink, pbghBakeryGallerySkylight, pbghBakeryGalleryShower],
+    allPhotos: [...pbghBakeryAllPhotos, ...lindenCommonAreaPhotos],
   },
   {
     slug: 'pbgh-garden',
@@ -320,6 +358,7 @@ export const properties: Property[] = [
     locationBlurb: "Located in Pittsburgh's East End, with convenient access to nearby neighborhoods, universities, hospitals, and local destinations.",
     address: '123 North Linden Avenue, Pittsburgh, PA 15208',
     galleryImages: [pbghGardenGalleryDining, pbghGardenGalleryBathroom, pbghGardenGalleryBedroomWide, pbghGardenGalleryBedroomBalcony, pbghGardenGalleryHallway],
+    allPhotos: [...pbghGardenAllPhotos, ...lindenCommonAreaPhotos],
   },
 ]
 

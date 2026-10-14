@@ -1,14 +1,17 @@
+import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { getPropertyBySlug } from '../data/properties'
 import { reviews } from '../data/reviews'
 import hostNicholas from '../assets/host-nicholas.jpg'
 import ReviewCard from '../components/ReviewCard'
+import PhotoLightbox from '../components/PhotoLightbox'
 import { isApplePlatform } from '../lib/platform'
 import styles from './PropertyDetailPage.module.css'
 
 export default function PropertyDetailPage() {
   const { slug } = useParams<{ slug: string }>()
   const property = getPropertyBySlug(slug)
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
 
   if (!property) {
     return (
@@ -46,22 +49,40 @@ export default function PropertyDetailPage() {
       <section className={styles.gallery}>
         <div className="container">
           <div className={styles.galleryGrid}>
-            <div className={styles.galleryMain}>
+            <button
+              type="button"
+              className={styles.galleryMain}
+              onClick={() => setLightboxIndex(0)}
+              aria-label={`View ${property.name} photos`}
+            >
               <img src={mainImage} alt={`${property.name} interior`} />
-            </div>
+            </button>
             {thumbImages.map((image, index) => (
-              <div className={styles.galleryThumb} key={image}>
+              <button
+                type="button"
+                className={styles.galleryThumb}
+                key={image}
+                onClick={() => setLightboxIndex(index + 1)}
+                aria-label={`View ${property.name} photos`}
+              >
                 <img src={image} alt={`${property.name} photo ${index + 2}`} />
                 {index === thumbImages.length - 1 && (
-                  <button type="button" className={styles.showAllPhotos}>
-                    Show all photos
-                  </button>
+                  <span className={styles.showAllPhotos}>Show all photos</span>
                 )}
-              </div>
+              </button>
             ))}
           </div>
         </div>
       </section>
+
+      {lightboxIndex !== null && (
+        <PhotoLightbox
+          photos={property.allPhotos}
+          initialIndex={lightboxIndex}
+          alt={property.name}
+          onClose={() => setLightboxIndex(null)}
+        />
+      )}
 
       <section className={styles.contentSection}>
         <div className="container">
