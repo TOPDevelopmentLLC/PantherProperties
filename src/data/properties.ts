@@ -1,5 +1,5 @@
 import heroCarriageHouse from '../assets/properties/hero-carriage-house.jpg'
-import heroTinyHouse from '../assets/properties/hero-tiny-house.jpg'
+import heroTinyHouse from '../assets/properties/meade-hero-livingroom-wide.jpg'
 import heroPbghSunrise from '../assets/properties/sunrise-hero-bedroom-wide.jpg'
 import heroPbghEastView from '../assets/properties/hero-pbgh-east-view.jpg'
 import heroPbghBakery from '../assets/properties/hero-pbgh-bakery.jpg'
@@ -11,11 +11,11 @@ import galleryKitchen1 from '../assets/properties/gallery-kitchen-1.jpg'
 import galleryKitchen2 from '../assets/properties/gallery-kitchen-2.jpg'
 import galleryBathroom from '../assets/properties/gallery-bathroom.jpg'
 
-import tinyHouseGalleryExterior from '../assets/properties/tiny-house-gallery-exterior.jpg'
-import tinyHouseGalleryBedroom from '../assets/properties/tiny-house-gallery-bedroom.jpg'
-import tinyHouseGallerySwing from '../assets/properties/tiny-house-gallery-swing.jpg'
-import tinyHouseGalleryPorch from '../assets/properties/tiny-house-gallery-porch.jpg'
-import tinyHouseGalleryExterior2 from '../assets/properties/tiny-house-gallery-exterior2.jpg'
+import tinyHouseGalleryBedroom from '../assets/properties/meade-gallery-bedroom.jpg'
+import tinyHouseGalleryKitchen from '../assets/properties/meade-gallery-kitchen.jpg'
+import tinyHouseGalleryBathroom from '../assets/properties/meade-gallery-bathroom.jpg'
+import tinyHouseGalleryPorchSwing from '../assets/properties/meade-gallery-porch-swing.jpg'
+import tinyHouseGalleryWorkspace from '../assets/properties/meade-gallery-workspace.jpg'
 
 import pbghSunriseGalleryBedroom from '../assets/properties/sunrise-gallery-bedroom.jpg'
 import pbghSunriseGalleryBedroomAlt from '../assets/properties/sunrise-gallery-bedroom-alt.jpg'
@@ -159,7 +159,7 @@ export const properties: Property[] = [
     locationTitle: 'Point Breeze, Pittsburgh',
     locationBlurb: "Located in Pittsburgh's East End, with convenient access to nearby neighborhoods, universities, hospitals, and local destinations.",
     address: '6839 Meade Street, Pittsburgh, PA 15208',
-    galleryImages: [tinyHouseGalleryExterior, tinyHouseGalleryBedroom, tinyHouseGallerySwing, tinyHouseGalleryPorch, tinyHouseGalleryExterior2],
+    galleryImages: [tinyHouseGalleryBedroom, tinyHouseGalleryKitchen, tinyHouseGalleryBathroom, tinyHouseGalleryPorchSwing, tinyHouseGalleryWorkspace],
   },
   {
     slug: 'pbgh-sunrise',
