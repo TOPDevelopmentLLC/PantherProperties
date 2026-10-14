@@ -1,7 +1,12 @@
 import heroCarriageHouse from '../assets/properties/hero-carriage-house.jpg'
 import heroTinyHouse from '../assets/properties/meade-hero-livingroom-wide.jpg'
 import heroPbghSunrise from '../assets/properties/sunrise-hero-bedroom-wide.jpg'
-import heroPbghEastView from '../assets/properties/hero-pbgh-east-view.jpg'
+import heroPbghEastView from '../assets/properties/eastview-hero-bedroom-wide.jpg'
+import pbghEastViewGalleryBedroom2 from '../assets/properties/eastview-gallery-bedroom2.jpg'
+import pbghEastViewGalleryKitchenette from '../assets/properties/eastview-gallery-kitchenette.jpg'
+import pbghEastViewGalleryBathroom from '../assets/properties/eastview-gallery-bathroom.jpg'
+import pbghEastViewGalleryBedroomAlt from '../assets/properties/eastview-gallery-bedroom-alt.jpg'
+import pbghEastViewGalleryDesk from '../assets/properties/eastview-gallery-desk.jpg'
 import heroPbghBakery from '../assets/properties/hero-pbgh-bakery.jpg'
 import heroPbghGarden from '../assets/properties/garden-hero-kitchenette-wide.jpg'
 
@@ -237,7 +242,7 @@ export const properties: Property[] = [
     locationTitle: 'Point Breeze, Pittsburgh',
     locationBlurb: "Located in Pittsburgh's East End, with convenient access to nearby neighborhoods, universities, hospitals, and local destinations.",
     address: '123 North Linden Avenue, Pittsburgh, PA 15208',
-    galleryImages: [galleryLivingRoom, galleryBackyard, galleryKitchen1, galleryKitchen2, galleryBathroom],
+    galleryImages: [pbghEastViewGalleryBedroom2, pbghEastViewGalleryKitchenette, pbghEastViewGalleryBathroom, pbghEastViewGalleryBedroomAlt, pbghEastViewGalleryDesk],
   },
   {
     slug: 'pbgh-bakery',
