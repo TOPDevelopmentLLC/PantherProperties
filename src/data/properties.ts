@@ -1,6 +1,6 @@
 import heroCarriageHouse from '../assets/properties/hero-carriage-house.jpg'
 import heroTinyHouse from '../assets/properties/hero-tiny-house.jpg'
-import heroPbghSunrise from '../assets/properties/hero-pbgh-sunrise.jpg'
+import heroPbghSunrise from '../assets/properties/sunrise-hero-bedroom-wide.jpg'
 import heroPbghEastView from '../assets/properties/hero-pbgh-east-view.jpg'
 import heroPbghBakery from '../assets/properties/hero-pbgh-bakery.jpg'
 import heroPbghGarden from '../assets/properties/hero-pbgh-garden.jpg'
@@ -17,11 +17,11 @@ import tinyHouseGallerySwing from '../assets/properties/tiny-house-gallery-swing
 import tinyHouseGalleryPorch from '../assets/properties/tiny-house-gallery-porch.jpg'
 import tinyHouseGalleryExterior2 from '../assets/properties/tiny-house-gallery-exterior2.jpg'
 
-import pbghSunriseGalleryBedroom from '../assets/properties/pbgh-sunrise-gallery-bedroom.jpg'
-import pbghSunriseGalleryExterior from '../assets/properties/pbgh-sunrise-gallery-exterior.jpg'
-import pbghSunriseGalleryWindow from '../assets/properties/pbgh-sunrise-gallery-window.jpg'
-import pbghSunriseGalleryDoor from '../assets/properties/pbgh-sunrise-gallery-door.jpg'
-import pbghSunriseGalleryBathroom from '../assets/properties/pbgh-sunrise-gallery-bathroom.jpg'
+import pbghSunriseGalleryBedroom from '../assets/properties/sunrise-gallery-bedroom.jpg'
+import pbghSunriseGalleryBedroomAlt from '../assets/properties/sunrise-gallery-bedroom-alt.jpg'
+import pbghSunriseGalleryBathroom from '../assets/properties/sunrise-gallery-bathroom.jpg'
+import pbghSunriseGalleryWorkspace from '../assets/properties/sunrise-gallery-workspace.jpg'
+import pbghSunriseGalleryKitchenette from '../assets/properties/sunrise-gallery-kitchenette.jpg'
 
 import pbghBakeryGalleryBalcony from '../assets/properties/pbgh-bakery-gallery-balcony.jpg'
 import pbghBakeryGalleryShelf from '../assets/properties/pbgh-bakery-gallery-shelf.jpg'
@@ -198,7 +198,7 @@ export const properties: Property[] = [
     locationTitle: 'Point Breeze, Pittsburgh',
     locationBlurb: "Located in Pittsburgh's East End, with convenient access to nearby neighborhoods, universities, hospitals, and local destinations.",
     address: '123 North Linden Avenue, Pittsburgh, PA 15208',
-    galleryImages: [pbghSunriseGalleryBedroom, pbghSunriseGalleryExterior, pbghSunriseGalleryWindow, pbghSunriseGalleryDoor, pbghSunriseGalleryBathroom],
+    galleryImages: [pbghSunriseGalleryBedroom, pbghSunriseGalleryBedroomAlt, pbghSunriseGalleryBathroom, pbghSunriseGalleryWorkspace, pbghSunriseGalleryKitchenette],
   },
   {
     slug: 'pbgh-east-view',
