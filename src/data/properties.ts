@@ -3,7 +3,7 @@ import heroTinyHouse from '../assets/properties/meade-hero-livingroom-wide.jpg'
 import heroPbghSunrise from '../assets/properties/sunrise-hero-bedroom-wide.jpg'
 import heroPbghEastView from '../assets/properties/hero-pbgh-east-view.jpg'
 import heroPbghBakery from '../assets/properties/hero-pbgh-bakery.jpg'
-import heroPbghGarden from '../assets/properties/hero-pbgh-garden.jpg'
+import heroPbghGarden from '../assets/properties/garden-hero-kitchenette-wide.jpg'
 
 import galleryLivingRoom from '../assets/properties/gallery-living-room.jpg'
 import galleryBackyard from '../assets/properties/gallery-backyard.jpg'
@@ -29,11 +29,11 @@ import pbghBakeryGallerySink from '../assets/properties/pbgh-bakery-gallery-sink
 import pbghBakeryGallerySkylight from '../assets/properties/pbgh-bakery-gallery-skylight.jpg'
 import pbghBakeryGalleryShower from '../assets/properties/pbgh-bakery-gallery-shower.jpg'
 
-import pbghGardenGalleryLivingroom from '../assets/properties/pbgh-garden-gallery-livingroom.jpg'
-import pbghGardenGalleryBedroom from '../assets/properties/pbgh-garden-gallery-bedroom.jpg'
-import pbghGardenGalleryBathroom from '../assets/properties/pbgh-garden-gallery-bathroom.jpg'
-import pbghGardenGalleryDeck from '../assets/properties/pbgh-garden-gallery-deck.jpg'
-import pbghGardenGalleryHallway from '../assets/properties/pbgh-garden-gallery-hallway.jpg'
+import pbghGardenGalleryDining from '../assets/properties/garden-gallery-dining.jpg'
+import pbghGardenGalleryBathroom from '../assets/properties/garden-gallery-bathroom.jpg'
+import pbghGardenGalleryBedroomWide from '../assets/properties/garden-gallery-bedroom-wide.jpg'
+import pbghGardenGalleryBedroomBalcony from '../assets/properties/garden-gallery-bedroom-balcony.jpg'
+import pbghGardenGalleryHallway from '../assets/properties/garden-gallery-hallway.jpg'
 
 import cardCarriageHouse from '../assets/carriage-house-card.jpg'
 import cardTinyHouse from '../assets/tiny-house-card.jpg'
@@ -315,7 +315,7 @@ export const properties: Property[] = [
     locationTitle: 'Point Breeze, Pittsburgh',
     locationBlurb: "Located in Pittsburgh's East End, with convenient access to nearby neighborhoods, universities, hospitals, and local destinations.",
     address: '123 North Linden Avenue, Pittsburgh, PA 15208',
-    galleryImages: [pbghGardenGalleryLivingroom, pbghGardenGalleryBedroom, pbghGardenGalleryBathroom, pbghGardenGalleryDeck, pbghGardenGalleryHallway],
+    galleryImages: [pbghGardenGalleryDining, pbghGardenGalleryBathroom, pbghGardenGalleryBedroomWide, pbghGardenGalleryBedroomBalcony, pbghGardenGalleryHallway],
   },
 ]
 
