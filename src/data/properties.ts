@@ -1,27 +1,32 @@
-import heroCarriageHouse from '../assets/properties/hero-carriage-house.jpg'
-import heroTinyHouse from '../assets/properties/hero-tiny-house.jpg'
-import heroPbghSunrise from '../assets/properties/hero-pbgh-sunrise.jpg'
-import heroPbghEastView from '../assets/properties/hero-pbgh-east-view.jpg'
+import heroCarriageHouse from '../assets/properties/carriagehouse-hero-exterior.jpg'
+import heroTinyHouse from '../assets/properties/meade-hero-livingroom-wide.jpg'
+import heroPbghSunrise from '../assets/properties/sunrise-hero-bedroom-wide.jpg'
+import heroPbghEastView from '../assets/properties/eastview-hero-bedroom-wide.jpg'
+import pbghEastViewGalleryBedroom2 from '../assets/properties/eastview-gallery-bedroom2.jpg'
+import pbghEastViewGalleryKitchenette from '../assets/properties/eastview-gallery-kitchenette.jpg'
+import pbghEastViewGalleryBathroom from '../assets/properties/eastview-gallery-bathroom.jpg'
+import pbghEastViewGalleryBedroomAlt from '../assets/properties/eastview-gallery-bedroom-alt.jpg'
+import pbghEastViewGalleryDesk from '../assets/properties/eastview-gallery-desk.jpg'
 import heroPbghBakery from '../assets/properties/hero-pbgh-bakery.jpg'
-import heroPbghGarden from '../assets/properties/hero-pbgh-garden.jpg'
+import heroPbghGarden from '../assets/properties/garden-hero-kitchenette-wide.jpg'
 
-import galleryLivingRoom from '../assets/properties/gallery-living-room.jpg'
-import galleryBackyard from '../assets/properties/gallery-backyard.jpg'
-import galleryKitchen1 from '../assets/properties/gallery-kitchen-1.jpg'
-import galleryKitchen2 from '../assets/properties/gallery-kitchen-2.jpg'
-import galleryBathroom from '../assets/properties/gallery-bathroom.jpg'
+import carriageHouseGalleryBed from '../assets/properties/carriagehouse-gallery-bed.jpg'
+import carriageHouseGalleryLivingWide from '../assets/properties/carriagehouse-gallery-living-wide.jpg'
+import carriageHouseGalleryKitchenette from '../assets/properties/carriagehouse-gallery-kitchenette.jpg'
+import carriageHouseGalleryBathroom from '../assets/properties/carriagehouse-gallery-bathroom.jpg'
+import carriageHouseGalleryCloset from '../assets/properties/carriagehouse-gallery-closet.jpg'
 
-import tinyHouseGalleryExterior from '../assets/properties/tiny-house-gallery-exterior.jpg'
-import tinyHouseGalleryBedroom from '../assets/properties/tiny-house-gallery-bedroom.jpg'
-import tinyHouseGallerySwing from '../assets/properties/tiny-house-gallery-swing.jpg'
-import tinyHouseGalleryPorch from '../assets/properties/tiny-house-gallery-porch.jpg'
-import tinyHouseGalleryExterior2 from '../assets/properties/tiny-house-gallery-exterior2.jpg'
+import tinyHouseGalleryBedroom from '../assets/properties/meade-gallery-bedroom.jpg'
+import tinyHouseGalleryKitchen from '../assets/properties/meade-gallery-kitchen.jpg'
+import tinyHouseGalleryBathroom from '../assets/properties/meade-gallery-bathroom.jpg'
+import tinyHouseGalleryPorchSwing from '../assets/properties/meade-gallery-porch-swing.jpg'
+import tinyHouseGalleryWorkspace from '../assets/properties/meade-gallery-workspace.jpg'
 
-import pbghSunriseGalleryBedroom from '../assets/properties/pbgh-sunrise-gallery-bedroom.jpg'
-import pbghSunriseGalleryExterior from '../assets/properties/pbgh-sunrise-gallery-exterior.jpg'
-import pbghSunriseGalleryWindow from '../assets/properties/pbgh-sunrise-gallery-window.jpg'
-import pbghSunriseGalleryDoor from '../assets/properties/pbgh-sunrise-gallery-door.jpg'
-import pbghSunriseGalleryBathroom from '../assets/properties/pbgh-sunrise-gallery-bathroom.jpg'
+import pbghSunriseGalleryBedroom from '../assets/properties/sunrise-gallery-bedroom.jpg'
+import pbghSunriseGalleryBedroomAlt from '../assets/properties/sunrise-gallery-bedroom-alt.jpg'
+import pbghSunriseGalleryBathroom from '../assets/properties/sunrise-gallery-bathroom.jpg'
+import pbghSunriseGalleryWorkspace from '../assets/properties/sunrise-gallery-workspace.jpg'
+import pbghSunriseGalleryKitchenette from '../assets/properties/sunrise-gallery-kitchenette.jpg'
 
 import pbghBakeryGalleryBalcony from '../assets/properties/pbgh-bakery-gallery-balcony.jpg'
 import pbghBakeryGalleryShelf from '../assets/properties/pbgh-bakery-gallery-shelf.jpg'
@@ -29,15 +34,46 @@ import pbghBakeryGallerySink from '../assets/properties/pbgh-bakery-gallery-sink
 import pbghBakeryGallerySkylight from '../assets/properties/pbgh-bakery-gallery-skylight.jpg'
 import pbghBakeryGalleryShower from '../assets/properties/pbgh-bakery-gallery-shower.jpg'
 
-import pbghGardenGalleryLivingroom from '../assets/properties/pbgh-garden-gallery-livingroom.jpg'
-import pbghGardenGalleryBedroom from '../assets/properties/pbgh-garden-gallery-bedroom.jpg'
-import pbghGardenGalleryBathroom from '../assets/properties/pbgh-garden-gallery-bathroom.jpg'
-import pbghGardenGalleryDeck from '../assets/properties/pbgh-garden-gallery-deck.jpg'
-import pbghGardenGalleryHallway from '../assets/properties/pbgh-garden-gallery-hallway.jpg'
+import pbghGardenGalleryDining from '../assets/properties/garden-gallery-dining.jpg'
+import pbghGardenGalleryBathroom from '../assets/properties/garden-gallery-bathroom.jpg'
+import pbghGardenGalleryBedroomWide from '../assets/properties/garden-gallery-bedroom-wide.jpg'
+import pbghGardenGalleryBedroomBalcony from '../assets/properties/garden-gallery-bedroom-balcony.jpg'
+import pbghGardenGalleryHallway from '../assets/properties/garden-gallery-hallway.jpg'
 
-import cardCarriageHouse from '../assets/carriage-house-card.jpg'
 import cardTinyHouse from '../assets/tiny-house-card.jpg'
 import cardGuesthouse from '../assets/guesthouse-card.jpg'
+
+function sortedValues(modules: Record<string, string>) {
+  return Object.keys(modules)
+    .sort()
+    .map((key) => modules[key])
+}
+
+const carriageHouseAllPhotos = sortedValues(
+  import.meta.glob<string>('../assets/properties/carriagehouse-*.jpg', { eager: true, import: 'default' }),
+)
+const tinyHouseAllPhotos = sortedValues(
+  import.meta.glob<string>('../assets/properties/meade-*.jpg', { eager: true, import: 'default' }),
+)
+const pbghSunriseAllPhotos = sortedValues(
+  import.meta.glob<string>('../assets/properties/sunrise-*.jpg', { eager: true, import: 'default' }),
+)
+const pbghEastViewAllPhotos = sortedValues(
+  import.meta.glob<string>('../assets/properties/eastview-*.jpg', { eager: true, import: 'default' }),
+)
+const pbghGardenAllPhotos = sortedValues(
+  import.meta.glob<string>('../assets/properties/garden-*.jpg', { eager: true, import: 'default' }),
+)
+const lindenCommonAreaPhotos = sortedValues(
+  import.meta.glob<string>('../assets/properties/linden-*.jpg', { eager: true, import: 'default' }),
+)
+const pbghBakeryAllPhotos = [
+  pbghBakeryGalleryBalcony,
+  pbghBakeryGalleryShelf,
+  pbghBakeryGallerySink,
+  pbghBakeryGallerySkylight,
+  pbghBakeryGalleryShower,
+]
 
 export interface ListingHighlight {
   title: string
@@ -77,6 +113,7 @@ export interface Property {
   locationBlurb: string
   address?: string
   galleryImages: string[]
+  allPhotos: string[]
 }
 
 export const properties: Property[] = [
@@ -85,9 +122,9 @@ export const properties: Property[] = [
     name: 'Carriage House Apartment',
     neighborhood: 'Squirrel Hill, Pittsburgh',
     cardDescription: 'A charming converted carriage house with private garden access.',
-    cardImage: cardCarriageHouse,
+    cardImage: carriageHouseGalleryBed,
     heroImage: heroCarriageHouse,
-    gridImage: cardCarriageHouse,
+    gridImage: carriageHouseGalleryBed,
     airbnbUrl: 'https://www.airbnb.com/rooms/45548553',
     heroSubtitle: 'Tiny home · 2 guests · 1 bedroom · 2 beds · 1 bath',
     rating: 4.88,
@@ -120,7 +157,8 @@ export const properties: Property[] = [
     locationTitle: 'Squirrel Hill, Pittsburgh',
     locationBlurb: "The property is in Squirrel Hill, close to Frick Park, neighborhood shops, restaurants, and Pittsburgh's East End destinations.",
     address: '6412 Darlington Road, Pittsburgh, PA 15217',
-    galleryImages: [galleryLivingRoom, galleryBackyard, galleryKitchen1, galleryKitchen2, galleryBathroom],
+    galleryImages: [carriageHouseGalleryBed, carriageHouseGalleryLivingWide, carriageHouseGalleryKitchenette, carriageHouseGalleryBathroom, carriageHouseGalleryCloset],
+    allPhotos: carriageHouseAllPhotos,
   },
   {
     slug: 'tiny-house',
@@ -159,7 +197,8 @@ export const properties: Property[] = [
     locationTitle: 'Point Breeze, Pittsburgh',
     locationBlurb: "Located in Pittsburgh's East End, with convenient access to nearby neighborhoods, universities, hospitals, and local destinations.",
     address: '6839 Meade Street, Pittsburgh, PA 15208',
-    galleryImages: [tinyHouseGalleryExterior, tinyHouseGalleryBedroom, tinyHouseGallerySwing, tinyHouseGalleryPorch, tinyHouseGalleryExterior2],
+    galleryImages: [tinyHouseGalleryBedroom, tinyHouseGalleryKitchen, tinyHouseGalleryBathroom, tinyHouseGalleryPorchSwing, tinyHouseGalleryWorkspace],
+    allPhotos: tinyHouseAllPhotos,
   },
   {
     slug: 'pbgh-sunrise',
@@ -198,7 +237,8 @@ export const properties: Property[] = [
     locationTitle: 'Point Breeze, Pittsburgh',
     locationBlurb: "Located in Pittsburgh's East End, with convenient access to nearby neighborhoods, universities, hospitals, and local destinations.",
     address: '123 North Linden Avenue, Pittsburgh, PA 15208',
-    galleryImages: [pbghSunriseGalleryBedroom, pbghSunriseGalleryExterior, pbghSunriseGalleryWindow, pbghSunriseGalleryDoor, pbghSunriseGalleryBathroom],
+    galleryImages: [pbghSunriseGalleryBedroom, pbghSunriseGalleryBedroomAlt, pbghSunriseGalleryBathroom, pbghSunriseGalleryWorkspace, pbghSunriseGalleryKitchenette],
+    allPhotos: [...pbghSunriseAllPhotos, ...lindenCommonAreaPhotos],
   },
   {
     slug: 'pbgh-east-view',
@@ -237,7 +277,8 @@ export const properties: Property[] = [
     locationTitle: 'Point Breeze, Pittsburgh',
     locationBlurb: "Located in Pittsburgh's East End, with convenient access to nearby neighborhoods, universities, hospitals, and local destinations.",
     address: '123 North Linden Avenue, Pittsburgh, PA 15208',
-    galleryImages: [galleryLivingRoom, galleryBackyard, galleryKitchen1, galleryKitchen2, galleryBathroom],
+    galleryImages: [pbghEastViewGalleryBedroom2, pbghEastViewGalleryKitchenette, pbghEastViewGalleryBathroom, pbghEastViewGalleryBedroomAlt, pbghEastViewGalleryDesk],
+    allPhotos: [...pbghEastViewAllPhotos, ...lindenCommonAreaPhotos],
   },
   {
     slug: 'pbgh-bakery',
@@ -277,6 +318,7 @@ export const properties: Property[] = [
     locationBlurb: "Located in Pittsburgh's East End, with convenient access to nearby neighborhoods, universities, hospitals, and local destinations.",
     address: '123 North Linden Avenue, Pittsburgh, PA 15208',
     galleryImages: [pbghBakeryGalleryBalcony, pbghBakeryGalleryShelf, pbghBakeryGallerySink, pbghBakeryGallerySkylight, pbghBakeryGalleryShower],
+    allPhotos: [...pbghBakeryAllPhotos, ...lindenCommonAreaPhotos],
   },
   {
     slug: 'pbgh-garden',
@@ -315,7 +357,8 @@ export const properties: Property[] = [
     locationTitle: 'Point Breeze, Pittsburgh',
     locationBlurb: "Located in Pittsburgh's East End, with convenient access to nearby neighborhoods, universities, hospitals, and local destinations.",
     address: '123 North Linden Avenue, Pittsburgh, PA 15208',
-    galleryImages: [pbghGardenGalleryLivingroom, pbghGardenGalleryBedroom, pbghGardenGalleryBathroom, pbghGardenGalleryDeck, pbghGardenGalleryHallway],
+    galleryImages: [pbghGardenGalleryDining, pbghGardenGalleryBathroom, pbghGardenGalleryBedroomWide, pbghGardenGalleryBedroomBalcony, pbghGardenGalleryHallway],
+    allPhotos: [...pbghGardenAllPhotos, ...lindenCommonAreaPhotos],
   },
 ]
 
